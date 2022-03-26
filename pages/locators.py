@@ -10,3 +10,4 @@ class MainPageLocators():
 class RegisterPageLocators():
     FIRST_NAME_SELECTOR = (By.XPATH, "//*[@id='FirstName']")
     LAST_NAME_SELECTOR = (By.XPATH, "//*[@id='LastName']")
+    EMAIL_REGISTER_SELECTOR = (By.XPATH, "//*[@id='Email']")

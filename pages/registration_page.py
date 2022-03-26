@@ -11,3 +11,6 @@ class RegistrationPage(BasePage):
 
     def should_be_lastname_field(self):
         assert self.is_element_present(*RegisterPageLocators.LAST_NAME_SELECTOR), "LastName field is not presented"
+
+    def should_be_email_field(self):
+        assert self.is_element_present(*RegisterPageLocators.EMAIL_REGISTER_SELECTOR), "Email field is not presented"

@@ -12,3 +12,9 @@ def test_should_see_register_lastname_field(browser):  # Проверка ест
     page = RegistrationPage(browser, link)
     page.open()
     page.should_be_lastname_field()
+
+def test_should_see_register_email_field(browser):  # Проверка есть ли поле ввода email
+    link = LinksLocators.REGISTER_PAGES_LINK
+    page = RegistrationPage(browser, link)
+    page.open()
+    page.should_be_email_field()
