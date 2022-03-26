@@ -6,3 +6,6 @@ class LinksLocators():
 
 class MainPageLocators():
     LOGIN_SELECTOR = (By.XPATH, "//a[@class='ico-register']")
+
+class RegisterPageLocators():
+    FIRST_NAME_SELECTOR = (By.XPATH, "//*[@id='FirstName']")
