@@ -7,3 +7,8 @@ def test_should_see_register_firstname_field(browser):  # Проверка ес�
     page.open()
     page.should_be_firstname_field()
 
+def test_should_see_register_lastname_field(browser):  # Проверка есть ли поле ввода фамилии
+    link = LinksLocators.REGISTER_PAGES_LINK
+    page = RegistrationPage(browser, link)
+    page.open()
+    page.should_be_lastname_field()
