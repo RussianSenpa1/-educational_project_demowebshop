@@ -36,14 +36,25 @@ def test_should_see_register_confirm_password_field(browser):  # Проверк�
     page.open()
     page.should_be_confirm_password_field()
 
+
 def test_should_see_register_button(browser):  # Проверка есть ли кнопка регистрации
     link = LinksLocators.REGISTER_PAGES_LINK
     page = RegistrationPage(browser, link)
     page.open()
     page.should_be_register_button()
 
+
 def test_should_see_gender_checkboxs(browser):  # Проверка есть ли чекбоксы пола
     link = LinksLocators.REGISTER_PAGES_LINK
     page = RegistrationPage(browser, link)
     page.open()
     page.should_be_gender_male_female()
+
+
+def test_go_to_registration(browser):  # Проверка регистрации
+    link = LinksLocators.REGISTER_PAGES_LINK
+    page = RegistrationPage(browser, link)
+    page.open()
+    first_name, last_name, email, password = page.registration_data()
+    page.new_user_register(first_name=first_name, last_name=last_name, email=email, password=password)
+    page.should_be_registration()

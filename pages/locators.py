@@ -19,3 +19,6 @@ class RegisterPageLocators():
     REGISTER_BUTTON_SELECTOR = (By.XPATH, "//*[@id='register-button']")
     GENDER_MALE_SELECTOR = (By.XPATH, "//*[@id='gender-male']")
     GENDER_FEMALE_SELECTOR = (By.XPATH, "//*[@id='gender-female']")
+    REZULT_MASSAGE_REGISTR_SELECTOR = (By.XPATH, "//*[@class='result']")
+    REZULT_BUTTON_REGISTR_SELECTOR = (By.XPATH, "//*[@class='button-1 register-continue-button']")
+
