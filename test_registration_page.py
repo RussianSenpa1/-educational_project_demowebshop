@@ -41,3 +41,9 @@ def test_should_see_register_button(browser):  # Проверка есть ли 
     page = RegistrationPage(browser, link)
     page.open()
     page.should_be_register_button()
+
+def test_should_see_gender_checkboxs(browser):  # Проверка есть ли чекбоксы пола
+    link = LinksLocators.REGISTER_PAGES_LINK
+    page = RegistrationPage(browser, link)
+    page.open()
+    page.should_be_gender_male_female()

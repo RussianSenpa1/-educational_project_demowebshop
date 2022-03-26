@@ -26,3 +26,8 @@ class RegistrationPage(BasePage):
     def should_be_register_button(self):
         assert self.is_element_present(
             *RegisterPageLocators.REGISTER_BUTTON_SELECTOR), "Register Button is not presented"
+
+    def should_be_gender_male_female(self):
+        assert self.is_element_present(
+            *RegisterPageLocators.GENDER_MALE_SELECTOR) and self.is_element_present(
+            *RegisterPageLocators.GENDER_FEMALE_SELECTOR), "Gender checkboxs is not presented"
