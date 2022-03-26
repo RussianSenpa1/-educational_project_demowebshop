@@ -1,0 +1,1 @@
+Репризиторий учебного проекта. Сайт проекта http://demowebshop.tricentis.com/
