@@ -22,3 +22,7 @@ class RegistrationPage(BasePage):
     def should_be_confirm_password_field(self):
         assert self.is_element_present(
             *RegisterPageLocators.CONFIRMPASSWORD_REGISTER_SELECTOR), "Confirm Password field is not presented"
+
+    def should_be_register_button(self):
+        assert self.is_element_present(
+            *RegisterPageLocators.REGISTER_BUTTON_SELECTOR), "Register Button is not presented"

@@ -16,3 +16,4 @@ class RegisterPageLocators():
     EMAIL_REGISTER_SELECTOR = (By.XPATH, "//*[@id='Email']")
     PASSWORD_REGISTER_SELECTOR = (By.XPATH, "//*[@id='Password']")
     CONFIRMPASSWORD_REGISTER_SELECTOR = (By.XPATH, "//*[@id='ConfirmPassword']")
+    REGISTER_BUTTON_SELECTOR = (By.XPATH, "//*[@id='register-button']")

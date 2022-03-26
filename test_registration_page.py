@@ -35,3 +35,9 @@ def test_should_see_register_confirm_password_field(browser):  # Проверк�
     page = RegistrationPage(browser, link)
     page.open()
     page.should_be_confirm_password_field()
+
+def test_should_see_register_button(browser):  # Проверка есть ли кнопка регистрации
+    link = LinksLocators.REGISTER_PAGES_LINK
+    page = RegistrationPage(browser, link)
+    page.open()
+    page.should_be_register_button()
