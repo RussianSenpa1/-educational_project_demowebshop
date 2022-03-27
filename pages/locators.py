@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 class LinksLocators():
     MAIN_PAGES_LINK = 'http://demowebshop.tricentis.com/'
     REGISTER_PAGES_LINK = 'http://demowebshop.tricentis.com/register'
+    LOGIN_PAGES_LINK = 'http://demowebshop.tricentis.com/login'
 
 
 class MainPageLocators():
@@ -24,3 +25,7 @@ class RegisterPageLocators():
     REZULT_MASSAGE_REGISTR_SELECTOR = (By.XPATH, "//*[@class='result']")
     REZULT_BUTTON_REGISTR_SELECTOR = (By.XPATH, "//*[@class='button-1 register-continue-button']")
 
+class LoginPageLocators():
+    EMAIL_LOGIN_SELETOR = (By.XPATH, "//*[@id='Email']")
+    PASSWORD_LOGIN_SELECTOR = (By.XPATH, "//*[@id='Password']")
+    LOGINBUTTON_LOGIN_SELECTOR =(By.XPATH, "//*[@class='button-1 login-button']")
