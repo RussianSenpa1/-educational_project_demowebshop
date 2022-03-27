@@ -7,7 +7,8 @@ class LinksLocators():
 
 
 class MainPageLocators():
-    LOGIN_SELECTOR = (By.XPATH, "//a[@class='ico-register']")
+    REGISTER_SELECTOR = (By.XPATH, "//a[@class='ico-register']")
+
 
 
 class RegisterPageLocators():
