@@ -20,3 +20,7 @@ class BasePage():
     def go_to_register_page(self):
         link = self.browser.find_element(*MainPageLocators.REGISTER_SELECTOR)
         link.click()
+
+    def go_to_login_page(self):
+        link = self.browser.find_element(*MainPageLocators.LOGIN_SELECTOR)
+        link.click()
