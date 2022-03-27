@@ -12,7 +12,6 @@ class MainPageLocators():
     LOGIN_SELECTOR = (By.XPATH, "//a[@class='ico-login']")
 
 
-
 class RegisterPageLocators():
     FIRST_NAME_SELECTOR = (By.XPATH, "//*[@id='FirstName']")
     LAST_NAME_SELECTOR = (By.XPATH, "//*[@id='LastName']")
@@ -25,7 +24,9 @@ class RegisterPageLocators():
     REZULT_MASSAGE_REGISTR_SELECTOR = (By.XPATH, "//*[@class='result']")
     REZULT_BUTTON_REGISTR_SELECTOR = (By.XPATH, "//*[@class='button-1 register-continue-button']")
 
+
 class LoginPageLocators():
     EMAIL_LOGIN_SELETOR = (By.XPATH, "//*[@id='Email']")
     PASSWORD_LOGIN_SELECTOR = (By.XPATH, "//*[@id='Password']")
-    LOGINBUTTON_LOGIN_SELECTOR =(By.XPATH, "//*[@class='button-1 login-button']")
+    LOGINBUTTON_LOGIN_SELECTOR = (By.XPATH, "//*[@class='button-1 login-button']")
+    ACCOUNT_SELECTOR = (By.XPATH, "//*[@class='account']")
