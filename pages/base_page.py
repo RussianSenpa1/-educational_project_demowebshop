@@ -31,5 +31,5 @@ class BasePage():
         link.click()
 
     def go_to_changepassword_page(self):
-        link = self.browser.find_element(*PasswordChangePageLocators. PASSWORD_CHANGE_BUTTON_CUSTOMER_SELECTOR)
+        link = self.browser.find_element(*PasswordChangePageLocators.PASSWORD_CHANGE_BUTTON_CUSTOMER_SELECTOR)
         link.click()

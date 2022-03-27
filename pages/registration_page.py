@@ -34,20 +34,20 @@ class RegistrationPage(BasePage):
             *RegisterPageLocators.GENDER_MALE_SELECTOR) and self.is_element_present(
             *RegisterPageLocators.GENDER_FEMALE_SELECTOR), "Gender checkboxs is not presented"
 
-    def should_be_registration(self):        #Проверка успешной регистрации
+    def should_be_registration(self):  # Проверка успешной регистрации
         assert self.is_element_present(
             *RegisterPageLocators.REZULT_MASSAGE_REGISTR_SELECTOR) and self.is_element_present(
             *RegisterPageLocators.REZULT_BUTTON_REGISTR_SELECTOR), "registration failed"
 
-
-    def registration_data(self):     #Создание рандомных данных для регистрации
+    def registration_data(self):  # Создание рандомных данных для регистрации
         first_name = faker.Faker().first_name()  # Создание рандомного Имени
         last_name = faker.Faker().last_name()  # Создание рандомного Фамилии
         email = faker.Faker().email()  # Создание рандомного Email
         password = "BloodTwix775"
-        return first_name,last_name,email,password
+        return first_name, last_name, email, password
 
-    def new_user_register(self,first_name, last_name, email, password):    #Заполнение полей регистрации и нажатие кнопки регистрации
+    def new_user_register(self, first_name, last_name, email,
+                          password):  # Заполнение полей регистрации и нажатие кнопки регистрации
 
         first_name_field = self.browser.find_element(*RegisterPageLocators.FIRST_NAME_SELECTOR)
         first_name_field.send_keys(str(first_name))
