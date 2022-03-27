@@ -1,5 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException
-from .locators import MainPageLocators
+from .locators import MainPageLocators, LoginPageLocators, PasswordChangePageLocators
+
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):
@@ -23,4 +24,12 @@ class BasePage():
 
     def go_to_login_page(self):
         link = self.browser.find_element(*MainPageLocators.LOGIN_SELECTOR)
+        link.click()
+
+    def go_to_user_page(self):
+        link = self.browser.find_element(*LoginPageLocators.ACCOUNT_SELECTOR)
+        link.click()
+
+    def go_to_changepassword_page(self):
+        link = self.browser.find_element(*PasswordChangePageLocators. PASSWORD_CHANGE_BUTTON_CUSTOMER_SELECTOR)
         link.click()

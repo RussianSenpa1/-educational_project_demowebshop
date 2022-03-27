@@ -5,6 +5,7 @@ class LinksLocators():
     MAIN_PAGES_LINK = 'http://demowebshop.tricentis.com/'
     REGISTER_PAGES_LINK = 'http://demowebshop.tricentis.com/register'
     LOGIN_PAGES_LINK = 'http://demowebshop.tricentis.com/login'
+    PASSWORDCHANGE_PAGES_LINK = 'http://demowebshop.tricentis.com/customer/changepassword'
 
 
 class MainPageLocators():
@@ -30,3 +31,14 @@ class LoginPageLocators():
     PASSWORD_LOGIN_SELECTOR = (By.XPATH, "//*[@id='Password']")
     LOGINBUTTON_LOGIN_SELECTOR = (By.XPATH, "//*[@class='button-1 login-button']")
     ACCOUNT_SELECTOR = (By.XPATH, "//*[@class='account']")
+
+
+class PasswordChangePageLocators():
+    PASSWORD_CHANGE_BUTTON_CUSTOMER_SELECTOR = (By.XPATH, "//*[@class='active']")
+    OLD_PASSWORD_SELECTOR = (By.XPATH, "//*[@id='OldPassword']")
+    NEW_PASSWORD_SELECTOR = (By.XPATH, "//*[@id='NewPassword']")
+    CONFIRMNEW_PASSWORD_SELECTOR = (By.XPATH, "//*[@id='ConfirmNewPassword']")
+    PASSWORD_CHANGE_BUTTON_SELECTOR = (By.XPATH, "//*[@class='button-1 change-password-button']")
+    REZULT_SELECTOR = (By.XPATH, "//*[@class='result']")
+    MESSAGE_TRUE = 'Password was changed'
+    NEW_PASSWORD = '123321qQq'
