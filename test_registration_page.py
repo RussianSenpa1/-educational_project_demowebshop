@@ -1,3 +1,5 @@
+import pytest
+
 from .pages.locators import LinksLocators
 from .pages.registration_page import RegistrationPage
 
@@ -50,7 +52,7 @@ def test_should_see_gender_checkboxs(browser):  # Проверка есть ли
     page.open()
     page.should_be_gender_male_female()
 
-
+@pytest.mark.main_test
 def test_go_to_registration(browser):  # Проверка регистрации
     link = LinksLocators.REGISTER_PAGES_LINK
     page = RegistrationPage(browser, link)

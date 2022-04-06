@@ -36,6 +36,7 @@ class TestLoginUser():
         page.new_user_register(first_name=first_name, last_name=last_name, email=email, password=password)
         return email, password
 
+    @pytest.mark.main_test
     def test_login_user(self, browser, register):
         link = LinksLocators.LOGIN_PAGES_LINK
         page = LoginPage(browser, link)

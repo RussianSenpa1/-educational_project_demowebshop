@@ -1,3 +1,5 @@
+import pytest
+
 from .pages.changepassword_page import PasswordChangePage
 from .pages.locators import LinksLocators
 from .pages.registration_page import RegistrationPage
@@ -14,7 +16,7 @@ def test_changepassword_field(browser):  # Проверка все ли поля
     page.open()
     page.should_be_field_change_password()
 
-
+@pytest.mark.main_test
 def test_changepassword_new_password(browser):  # Проверка смены пароля
     link = LinksLocators.REGISTER_PAGES_LINK
     page = RegistrationPage(browser, link)
@@ -27,7 +29,7 @@ def test_changepassword_new_password(browser):  # Проверка смены п
     page.new_password_data(password=password)
     page.should_be_change_password()
 
-
+@pytest.mark.main_test
 def test_changepassword_new_password_message(browser):  # Проверка текста сообщения при смене пароля
     link = LinksLocators.REGISTER_PAGES_LINK
     page = RegistrationPage(browser, link)
