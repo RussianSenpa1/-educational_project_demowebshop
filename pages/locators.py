@@ -6,7 +6,11 @@ class LinksLocators():
     REGISTER_PAGES_LINK = 'http://demowebshop.tricentis.com/register'
     LOGIN_PAGES_LINK = 'http://demowebshop.tricentis.com/login'
     PASSWORDCHANGE_PAGES_LINK = 'http://demowebshop.tricentis.com/customer/changepassword'
+    BOOK_PAGES_LINK = 'http://demowebshop.tricentis.com/health'
 
+class TestAccount():
+    LOGIN = 'bloodtwix90@mail.ru'
+    PASSWORD = '123321qQq'
 
 class MainPageLocators():
     REGISTER_SELECTOR = (By.XPATH, "//a[@class='ico-register']")
@@ -42,3 +46,8 @@ class PasswordChangePageLocators():
     REZULT_SELECTOR = (By.XPATH, "//*[@class='result']")
     MESSAGE_TRUE = 'Password was changed'
     NEW_PASSWORD = '123321qQq'
+
+
+class BookPageLocators():
+    BUTTON_BUY_SELECTOR = (By.XPATH, "//*[@class='button-1 add-to-cart-button']")
+    MASSENGE_BUY_BOOK_SELECTOR = (By.XPATH, "//p[@class='content']")
