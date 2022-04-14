@@ -15,6 +15,13 @@ class BasePage():
             return False
         return True
 
+    def is_not_element_present(self, how, what):  # Метод проверки отсутствия элемента на странице
+        try:
+            self.browser.find_element(how, what)
+        except (NoSuchElementException):
+            return True
+        return False
+
     def open(self):  # Метод открытия страницы
         self.browser.get(self.url)
 
