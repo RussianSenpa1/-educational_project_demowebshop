@@ -7,6 +7,7 @@ class LinksLocators():
     LOGIN_PAGES_LINK = 'http://demowebshop.tricentis.com/login'
     PASSWORDCHANGE_PAGES_LINK = 'http://demowebshop.tricentis.com/customer/changepassword'
     BOOK_PAGES_LINK = 'http://demowebshop.tricentis.com/health'
+    BOOKS_PAGES_LINK = 'http://demowebshop.tricentis.com/books'
 
 class TestAccount():
     LOGIN = 'bloodtwix90@mail.ru'
@@ -51,3 +52,10 @@ class PasswordChangePageLocators():
 class BookPageLocators():
     BUTTON_BUY_SELECTOR = (By.XPATH, "//*[@class='button-1 add-to-cart-button']")
     MASSENGE_BUY_BOOK_SELECTOR = (By.XPATH, "//p[@class='content']")
+
+class BooksPageLocators():
+    BUTTON_BUY_BOOKS_SELECTOR = (By.XPATH, "//*[@class='button-2 product-box-add-to-cart-button']")
+    MASSENGE_BUY_BOOKS_SELECTOR = (By.XPATH, "//p[@class='content']")
+
+    BOOKS_CONTEINER_SELECTOR = (By.XPATH, "//*[@class='product-grid']")
+    BOOKS_BOOK_SELECTOR = (By.XPATH, "//*[@class='item-box']")
