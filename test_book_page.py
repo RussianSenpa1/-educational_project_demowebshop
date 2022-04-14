@@ -2,8 +2,18 @@ import pytest
 from selenium.webdriver.common.by import By
 
 from .pages.book_page import BookPage
-from .pages.locators import LinksLocators, TestAccount
-from .pages.login_page import LoginPage
+from .pages.locators import LinksLocators, TestAccount, LoginPageLocators
+
+
+@pytest.fixture  # Фикстура авторизации на аккаунт
+def authorization_account(browser):
+    browser.get(LinksLocators.LOGIN_PAGES_LINK)
+    email_field = browser.find_element(*LoginPageLocators.EMAIL_LOGIN_SELETOR)
+    email_field.send_keys(*TestAccount.LOGIN)
+    password_field = browser.find_element(*LoginPageLocators.PASSWORD_LOGIN_SELECTOR)
+    password_field.send_keys(*TestAccount.PASSWORD)
+    register = browser.find_element(*LoginPageLocators.LOGINBUTTON_LOGIN_SELECTOR)
+    register.click()
 
 
 @pytest.fixture  # Фикстура очишения корзины после теста
@@ -18,29 +28,19 @@ def clear_account(browser):
     clear_button.click()
 
 
+@pytest.mark.usefixtures("authorization_account")
 @pytest.mark.parametrize('link_book', ["http://demowebshop.tricentis.com/computing-and-internet"])
 def test_should_be_buy_button(browser, link_book):  # Тест на наличие кнопки покупки на странице книги
-    link = LinksLocators.LOGIN_PAGES_LINK
-    login = TestAccount.LOGIN
-    password = TestAccount.PASSWORD
-    page = LoginPage(browser, link)
-    page.open()
-    page.login_user(email=login, password=password)
     page = BookPage(browser, link_book)
     page.open()
     page.should_be_buy_button()
 
 
 @pytest.mark.main_test
+@pytest.mark.usefixtures("authorization_account")
 @pytest.mark.usefixtures("clear_account")
 @pytest.mark.parametrize('link_book', ["http://demowebshop.tricentis.com/computing-and-internet"])
 def test_should_be_massenge_buy_book(browser, link_book):  # Тест на текст всплывающего сообщения при добавлении книги
-    link = LinksLocators.LOGIN_PAGES_LINK
-    login = TestAccount.LOGIN
-    password = TestAccount.PASSWORD
-    page = LoginPage(browser, link)
-    page.open()
-    page.login_user(email=login, password=password)
     page = BookPage(browser, link_book)
     page.open()
     page.should_be_buy_massenge()
