@@ -8,10 +8,13 @@ class LinksLocators():
     PASSWORDCHANGE_PAGES_LINK = 'http://demowebshop.tricentis.com/customer/changepassword'
     BOOK_PAGES_LINK = 'http://demowebshop.tricentis.com/health'
     BOOKS_PAGES_LINK = 'http://demowebshop.tricentis.com/books'
+    BASKET_PAGES_LINK = 'http://demowebshop.tricentis.com/cart'
+
 
 class TestAccount():
     LOGIN = 'bloodtwix90@mail.ru'
     PASSWORD = '123321qQq'
+
 
 class MainPageLocators():
     REGISTER_SELECTOR = (By.XPATH, "//a[@class='ico-register']")
@@ -53,9 +56,20 @@ class BookPageLocators():
     BUTTON_BUY_SELECTOR = (By.XPATH, "//*[@class='button-1 add-to-cart-button']")
     MASSENGE_BUY_BOOK_SELECTOR = (By.XPATH, "//p[@class='content']")
 
+
 class BooksPageLocators():
     BUTTON_BUY_BOOKS_SELECTOR = (By.XPATH, "//*[@class='button-2 product-box-add-to-cart-button']")
     MASSENGE_BUY_BOOKS_SELECTOR = (By.XPATH, "//p[@class='content']")
-
     BOOKS_CONTEINER_SELECTOR = (By.XPATH, "//*[@class='product-grid']")
     BOOKS_BOOK_SELECTOR = (By.XPATH, "//*[@class='item-box']")
+
+
+class BasketPageLocators():
+    BOOKS_BASKET_SELECTOR = (By.XPATH, "//*[@class='cart-item-row']")
+    CHECK_BOX_BOOKS = (By.XPATH, "//input[@type='checkbox']")
+    CLEAR_BUTTON_SELECTOR = (By.XPATH, "//*[@class='button-2 update-cart-button']")
+    PRICE_PRODUCT_SELECTOR = (By.XPATH, "//*[@class='product-unit-price']")
+    PRICE_PRODUCT_SUBTOTAL_SELECTOR = (By.XPATH, "//*[@class='product-subtotal']")
+    PRICE_TOTAL_SELECTOR = (By.XPATH, "//*[@class='product-price']")
+    FIELD_AMOUNT_BOOKS_SELECTOR = (By.XPATH, "//input[@class='qty-input']")
+    MASSENGE_FIELD_SELECTOR = (By.XPATH, "//*[@class='message-error']")
